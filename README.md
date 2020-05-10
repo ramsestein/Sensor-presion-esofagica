@@ -11,7 +11,7 @@ La precisión del SPTO en su primera versión es de +-0.18cmH2O (teórica) por l
 
 **El uso del SPTO debe ser realizado por personal médico competente en la materia.**
 
-Aunque técnicamente no sea necesario, éste aparato no ha sido validado por la AEMPS.
+** Éste dispositivo no ha sido validado por la AEMPS y esta aun en fase de desarollo **.
 
 ### Problemática
 

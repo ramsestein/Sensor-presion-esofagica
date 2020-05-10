@@ -1,68 +1,72 @@
-# **Sensor de PresiÛn Transpulmonar Open-Source**
+# **Sensor de Presi√≥n Transpulmonar Open-Source**
 
-Proyecto de herramienta portatil de mediciÛn de la presiÛn transpulmonar basada en arduino: Sensor de PresiÛn Transpulmonar Open-source.
+Proyecto de herramienta portatil de medici√≥n de la presi√≥n transpulmonar basada en arduino: Sensor de Presi√≥n Transpulmonar Open-source.
 
-El Sensor de PresiÛn Transpulmonar Open-Source (SPTO) permite la r·pida mediciÛn de la presiÛn transpulmonar (PL)
-mediante captaciÛn de presiÛn en vÌa aÈrea (Paw) y en vÌa esof·gica (Pes) en pacientes intubados,
-particularmente afectados de neumonÌa bilateral por SARS-COV-2, empleando la propÌa c·nula respiratoria  
-para la mediciÛn de Paw y una sonda nasog·strica con balÛn esof·gico para la mediciÛn de Pes.
+El Sensor de Presi√≥n Transpulmonar Open-Source (SPTO) permite la r√°pida medici√≥n de la presi√≥n transpulmonar (PL)
+mediante captaci√≥n de presi√≥n en v√≠a a√©rea (Paw) y en v√≠a esof√°gica (Pes) en pacientes intubados,
+particularmente afectados de neumon√≠a bilateral por SARS-COV-2, empleando la prop√≠a c√°nula respiratoria  
+para la medici√≥n de Paw y una sonda nasog√°strica con bal√≥n esof√°gico para la medici√≥n de Pes.
 
-La precisiÛn del SPTO en su primera versiÛn es de +-0.18cmH2O (teÛrica) por lo que se comprueba fiabilidad para Èste tipo de mediciones.
+La precisi√≥n del SPTO en su primera versi√≥n es de +-0.18cmH2O (te√≥rica) por lo que se comprueba fiabilidad para √©ste tipo de mediciones.
 
-**El uso del SPTO debe ser realizado por personal mÈdico competente en la materia.**
+**El uso del SPTO debe ser realizado por personal m√©dico competente en la materia.**
 
-Aunque tÈcnicamente no sea necesario, Èste aparato no ha sido validado por la AEMPS.
+Aunque t√©cnicamente no sea necesario, √©ste aparato no ha sido validado por la AEMPS.
 
-La monitorizaciÛn de la ventilaciÛn mec·nica comprende como base la presiÛn en vÌa aÈrea y el flujo.
-Para la mayorÌa de pacientes, Èstas dos medidas son suficientes para realizar los ajustes de ventilaciÛn. 
-Sin embargo, la PresiÛn en vÌa aÈrea es sÛlo una mediciÛn indirecta de las presiones en juego
-en los componentes principales del sistema respiratorio (simplificando): pulmones y caja tor·cia.
+### Problem√°tica
 
-Para realizar un ajuste preciso de la ventilaciÛn mec·nica o evaluar la capacidad de reclutamiento pulmonar de los pacientes m·s graves,
+La monitorizaci√≥n de PL es una tecnolog√≠a que ya incluyen s√≥lo algunos de los ventiladores mec√°nicos m√°s modernos.
+
+No obstante, las medidas de presi√≥n necesarias al c√°lculo de PL se pueden tomar con la mayor√≠a de equipos electrom√©dicos ya existentes.
+Sin embargo, la toma de medidas sin herramientas de c√°lculo integradas supone un proceso demasiado largo de toma de datos y procesado de los mismos:
+un tiempo del que el personal m√©dico no dispone en situaci√≥n de alta ocupaci√≥n sumada a medidas de higiene extremas,
+como ocurre con los pacientes afectados por SARS-COV-2.
+
+
+### Soluci√≥n
+
+Proponemos un modelo de sensor de presi√≥n transpulmonar, port√°til y de f√°cil fabricaci√≥n basado en Arduino.
+√âste prototipo se puede fabricar en poco tiempo con componentes off the shelf y supone dar capacidad al personal m√©dico para monitorizar los pacientes m√°s graves
+d√°ndoles un margen de mejora que puede resultar crucial en los casos m√°s cr√≠ticos.
+
+El desarrollo est√° basado en torno a sensores/transductores de presi√≥n disponibles en el mercado, aunque dif√≠ciles de conseguir en las circunstancias actuales.
+Recomendamos consultar con personal m√©dico la necesidad de contar con un SPTO antes de realizar compra de material si se va a fabricar una unidad.
+No todo el personal m√©dico est√° familiarizado con la monitorizaci√≥n de la PL y su implicaci√≥n para la mec√°nica respiratoria.
+
+No obstante es una tecnolog√≠a muy accesible que puede ayudar a salvar vidas si se emplea debidamente,
+especialmente en aquellos pacientes m√°s graves que necesitan de una monitorizaci√≥n m√°s avanzada de la ventilaci√≥n mec√°nica.
+
+La monitorizaci√≥n de la ventilaci√≥n mec√°nica comprende como base la presi√≥n en v√≠a a√©rea y el flujo.
+Para la mayor√≠a de pacientes, √©stas dos medidas son suficientes para realizar los ajustes de ventilaci√≥n. 
+Sin embargo, la Presi√≥n en v√≠a a√©rea es s√≥lo una medici√≥n indirecta de las presiones en juego
+en los componentes principales del sistema respiratorio (simplificando): pulmones y caja tor√°cia.
+
+Para realizar un ajuste preciso de la ventilaci√≥n mec√°nica o evaluar la capacidad de reclutamiento pulmonar de los pacientes m√°s graves,
 se hace necesario diferenciar la complianza de ambos.
 
-Est· asumido que la mediciÛn de la PresiÛn Esof·gica (Pes) es un buen indicador que sustituye la mediciÛn de la presiÛn pleural*.
+Est√° asumido que la medici√≥n de la Presi√≥n Esof√°gica (Pes) es un buen indicador que sustituye la medici√≥n de la presi√≥n pleural*.
 
-Mediante la mediciÛn de la Paw y la Pes es posible obtener la presiÛn transpulmonar(PL)=Paw-Pes calculada
-durante la oclusiÛn en fin de inspiraciÛn y espiraciÛn. PL representa la presiÛn necesaria para dilatar el parÈnquima pulmonar.
-El SPTO calcula tambiÈn los diferenciales de Paw y Pes durante la mediciÛn.
+Mediante la medici√≥n de la Paw y la Pes es posible obtener la presi√≥n transpulmonar(PL)=Paw-Pes calculada
+durante la oclusi√≥n en fin de inspiraci√≥n y espiraci√≥n. PL representa la presi√≥n necesaria para dilatar el par√©nquima pulmonar.
+El SPTO calcula tambi√©n los diferenciales de Paw y Pes durante la medici√≥n.
 
-De Èste modo el personal mÈdico tiene una mejor percepciÛn del efecto de la ventilaciÛn mec·nica y/o de la capacidad de reclutamiento pulmonar del paciente,
+De √©ste modo el personal m√©dico tiene una mejor percepci√≥n del efecto de la ventilaci√≥n mec√°nica y/o de la capacidad de reclutamiento pulmonar del paciente,
 pudiendo realizar ajustes precisos del modo ventilatorio.
 
-*Referencias:
-1. Talmor D, Sarge T, OíDonnell C, Ritz R, Malhotra, Lisbon A, Loring S. Esophageal and transpulmonary pressures in acute respiratory failure Crit Care Med 2006; 34:1389ñ1394
+### Referencias
+1. Talmor D, Sarge T, O‚ÄôDonnell C, Ritz R, Malhotra, Lisbon A, Loring S. Esophageal and transpulmonary pressures in acute respiratory failure Crit Care Med 2006; 34:1389‚Äì1394
 2. Gattinoni L, Chiumello D, Carlesso E, Valenza F. Benchto-bedside review: Chest wall elastance in acute lung injury/acute respiratory distress syndrome patients. Critical Care 2004, 8:350-355
-3. Hess D, Bigatello L. The chest wall in acute lung injury/acute respiratory distress syndrome. Curr Opin Crit Care 2008;14:94ñ102
+3. Hess D, Bigatello L. The chest wall in acute lung injury/acute respiratory distress syndrome. Curr Opin Crit Care 2008;14:94‚Äì102
 4. Akoumianaki E, Maggiore S, Valenza F, Bellani G, Jubran A, et al. The application of esophageal pressure measurement in patients with respiratory failure. Am J Respir Crit Care Med 2014;189:520-31
 
 
-#Problem·tica:
 
-La monitorizaciÛn de PL es una tecnologÌa que ya incluyen sÛlo algunos de los ventiladores mec·nicos m·s modernos.
+### Creado por:
+Francisco Jos√© Parrilla G√≥mez - M√©dico especialista en Medicina Intensiva, Servicio de Medicina Intensiva, Hospital del Mar, Parc de Salut Mar, IMIM, GREPAC, Barcelona - concepto, desarrollo, consejo cl√≠nico, pruebas
+Andr√©s Parrilla G√≥mez - Lyc√©e Saint Stanislas, Nantes - concepto, desarrollo, programaci√≥n
+Alvaro Jans√† - Fablab Sant Cugat, Barcelona - desarrollo, producci√≥n, soporte programaci√≥n
+Marc Estudillo - Ingenier√≠a electrom√©dica, Barcelona - desarrollo, producci√≥n
+Victor Boutonnet Antelo - Benimakers Makerspace, Valencia - desarrollo, soporte programaci√≥n, coordinaci√≥n proyecto
 
-No obstante, las medidas de presiÛn necesarias al c·lculo de PL se pueden tomar con la mayorÌa de equipos electromÈdicos ya existentes.
-Sin embargo, la toma de medidas sin herramientas de c·lculo integradas supone un proceso demasiado largo de toma de datos y procesado de los mismos:
-un tiempo del que el personal mÈdico no dispone en situaciÛn de alta ocupaciÛn sumada a medidas de higiene extremas,
-como ocurre con los pacientes afectados por SARS-COV-2.
-
-Proponemos un modelo de sensor de presiÛn transpulmonar, port·til y de f·cil fabricaciÛn basado en Arduino.
-…ste prototipo se puede fabricar en poco tiempo con componentes off the shelf y supone dar capacidad al personal mÈdico para monitorizar los pacientes m·s graves
-d·ndoles un margen de mejora que puede resultar crucial en los casos m·s crÌticos.
-
-El desarrollo est· basado en torno a sensores/transductores de presiÛn disponibles en el mercado, aunque difÌciles de conseguir en las circunstancias actuales.
-Recomendamos consultar con personal mÈdico la necesidad de contar con un SPTO antes de realizar compra de material si se va a fabricar una unidad.
-No todo el personal mÈdico est· familiarizado con la monitorizaciÛn de la PL y su implicaciÛn para la mec·nica respiratoria.
-
-No obstante es una tecnologÌa muy accesible que puede ayudar a salvar vidas si se emplea debidamente,
-especialmente en aquellos pacientes m·s graves que necesitan de una monitorizaciÛn m·s avanzada de la ventilaciÛn mec·nica.
-
-Creado por:
-Francisco JosÈ Parrilla GÛmez - MÈdico especialista en Medicina Intensiva, Servicio de Medicina Intensiva, Hospital del Mar, Parc de Salut Mar, IMIM, GREPAC, Barcelona - concepto, desarrollo, consejo clÌnico, pruebas
-AndrÈs Parrilla GÛmez - LycÈe Saint Stanislas, Nantes - concepto, desarrollo, programaciÛn
-Alvaro Jans‡ - Fablab Sant Cugat, Barcelona - desarrollo, producciÛn, soporte programaciÛn
-Marc Estudillo - IngenierÌa electromÈdica, Barcelona - desarrollo, producciÛn
-Victor Boutonnet Antelo - Benimakers Makerspace, Valencia - desarrollo, soporte programaciÛn, coordinaciÛn proyecto
-
-Liberado bajo Licencia Creative Commons AtribuciÛn 4.0 Internacional.
+Liberado bajo Licencia Creative Commons Atribuci√≥n 4.0 Internacional.
 

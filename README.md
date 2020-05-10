@@ -37,7 +37,7 @@ more accurately.
 
 #Problem:
 
-PL monitorization is an already existing technology only implement in most modern mechanical respirators.
+PL monitorization is an already existing technology only implemented in most modern mechanical respirators.
 
 Pressure measurements necessary to calculate PL can be obtained with most electromedical devices nonetheless.
 Although, this data acquisition without integrated calculation tools is a lengthy process,
@@ -56,11 +56,11 @@ Nonetheless this now very accessible technology can help save lives if used corr
 especially for those acutely ill patients who need more advanced mechanical ventilation monitoring.
 
 Made possible by:
-Francisco José Parrilla Gómez - Critical Care Medicine specialist physician, Intensive Medicine Service, Hospital del Mar, Parc de Salut Mar, IMIM, GREPAC, Barcelona - concept, development, clinical advisor, testing
-Andrés Parrilla Gómez - Lycée Saint Stanislas, Nantes - concept, development, programming
-Alvaro Jansà - Fablab Sant Cugat, Barcelona - development, production, programming support
-Marc Estudillo - Electromedical Engineering, Barcelona - development, production
-Victor Boutonnet Antelo - Benimakers Makerspace, Valencia - development, programming support, project coordination
+Francisco José Parrilla Gómez - Critical Care Medicine specialist physician, Intensive Medicine Service, Hospital del Mar, Parc de Salut Mar, IMIM, GREPAC, Barcelona - concept, development, clinical advisor, testing  
+Andrés Parrilla Gómez - Lycée Saint Stanislas, Nantes - concept, development, programming  
+Alvaro Jansà - Fablab Sant Cugat, Barcelona - development, production, programming support  
+Marc Estudillo - Electromedical Engineering, Barcelona - development, production  
+Victor Boutonnet Antelo - Benimakers Makerspace, Valencia - development, programming support, project coordination  
 
 Made available under Creative Commons Licence Attribution 4.0 International (CC BY 4.0).
 

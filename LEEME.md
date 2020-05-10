@@ -4,7 +4,7 @@ Proyecto de herramienta portatil de medición de la presión transpulmonar basada 
 
 El Sensor de Presión Transpulmonar Open-Source (SPTO) permite la rápida medición de la presión transpulmonar (PL)
 mediante captación de presión en vía aérea (Paw) y en vía esofágica (Pes) en pacientes intubados,
-particularmente afectados de neumonía bilateral por SARS-COV-2, empleando la propía cánula respiratoria  
+particularmente afectados de neumonía bilateral por SARS-COV-2, empleando la propía tubuladura respiratoria  
 para la medición de Paw y una sonda nasogástrica con balón esofágico para la medición de Pes.
 
 La precisión del SPTO en su primera versión es de +-0.18cmH2O (teórica) por lo que se comprueba fiabilidad para éste tipo de mediciones.

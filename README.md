@@ -9,6 +9,9 @@ for Paw and an esophageal balloon nasogastric probe for Pes.
 
 The OSTPS's accuracy in this first iteration is +-0.18cmH2O (theorical) so its reliability and precision is assumed correct for this type of measurement.
 
+<img src="Images/graph.jpeg" width="500">
+
+
 **The use of a OSTPS must be performed by trained medical personnel.**
 
 Mechanical ventilation monitoring, at its basis, encompasses airway pressure and flow.
@@ -28,14 +31,7 @@ This first OSTPS version also calculates Paw and Pes differentials.
 Through the use of OSTPS clinicians may get a better perception of patient-ventilator interaction and plan for respiratory strategy
 more accurately.
 
-*References:
-1. Talmor D, Sarge T, O’Donnell C, Ritz R, Malhotra, Lisbon A, Loring S. Esophageal and transpulmonary pressures in acute respiratory failure Crit Care Med 2006; 34:1389–1394
-2. Gattinoni L, Chiumello D, Carlesso E, Valenza F. Benchto-bedside review: Chest wall elastance in acute lung injury/acute respiratory distress syndrome patients. Critical Care 2004, 8:350-355
-3. Hess D, Bigatello L. The chest wall in acute lung injury/acute respiratory distress syndrome. Curr Opin Crit Care 2008;14:94–102
-4. Akoumianaki E, Maggiore S, Valenza F, Bellani G, Jubran A, et al. The application of esophageal pressure measurement in patients with respiratory failure. Am J Respir Crit Care Med 2014;189:520-31
-
-
-#Problem:
+## Problem
 
 PL monitorization is an already existing technology only implemented in most modern mechanical respirators.
 
@@ -55,10 +51,19 @@ Not all medical personnel is familiar with PL monitoring and its implications fo
 Nonetheless this now very accessible technology can help save lives if used correctly,
 especially for those acutely ill patients who need more advanced mechanical ventilation monitoring.
 
-Made possible by:
-Francisco José Parrilla Gómez - Critical Care Medicine specialist physician, Intensive Medicine Service, Hospital del Mar, Parc de Salut Mar, IMIM, GREPAC, Barcelona - concept, development, clinical advisor, testing  
-Andrés Parrilla Gómez - Lycée Saint Stanislas, Nantes - concept, development, programming  
-Alvaro Jansà - Fablab Sant Cugat, Barcelona - development, production, programming support  
+### References
+1. Talmor D, Sarge T, Oâ€™Donnell C, Ritz R, Malhotra, Lisbon A, Loring S. Esophageal and transpulmonary pressures in acute respiratory failure Crit Care Med 2006; 34:1389â€“1394
+2. Gattinoni L, Chiumello D, Carlesso E, Valenza F. Benchto-bedside review: Chest wall elastance in acute lung injury/acute respiratory distress syndrome patients. Critical Care 2004, 8:350-355
+3. Hess D, Bigatello L. The chest wall in acute lung injury/acute respiratory distress syndrome. Curr Opin Crit Care 2008;14:94â€“102
+4. Akoumianaki E, Maggiore S, Valenza F, Bellani G, Jubran A, et al. The application of esophageal pressure measurement in patients with respiratory failure. Am J Respir Crit Care Med 2014;189:520-31
+
+
+
+
+### Made possible by
+Francisco JosÃ© Parrilla GÃ³mez - Critical Care Medicine specialist physician, Intensive Medicine Service, Hospital del Mar, Parc de Salut Mar, IMIM, GREPAC, Barcelona - concept, development, clinical advisor, testing  
+AndrÃ©s Parrilla GÃ³mez - LycÃ©e Saint Stanislas, Nantes - concept, development, programming  
+Alvaro JansÃ  - Fablab Sant Cugat, Barcelona - development, production, programming support  
 Marc Estudillo - Electromedical Engineering, Barcelona - development, production  
 Victor Boutonnet Antelo - Benimakers Makerspace, Valencia - development, programming support, project coordination  
 

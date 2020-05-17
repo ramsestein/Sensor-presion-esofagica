@@ -1,6 +1,6 @@
 /*
 Transpulmonar sensor
- version 3.3.2
+ version 3.3.4
  
  Authors:
  Francisco Jose PARRILLA GOMEZ
@@ -23,6 +23,8 @@ Transpulmonar sensor
  v3.3 2020-05-04 : round values to integers (round to 0.5 commented out)
  v3.3.1 2020-05.06 : back to float values
  v3.3.2 2020-05.06 : rounding compiler options added
+ v3.3.3 2020-05-09 : changed PL avg to Ratio
+ v3.3.4 2020-05-09 : bug fix
  */
 
 
@@ -389,8 +391,8 @@ void loop() {
   //restart screen
   tft.fillRect(31,0,280,215,BLACK); // plot
   tft.setCursor(110,3);
-  tft.println("Transpulmonar P Sensor ");
   tft.fillRect(0,198,320,50,BLACK); //max, min data
+  //tft.println("Transpulmonar P Sensor ");
   tft.fillRect(33,185,320,100,BLACK);
   tft.fillRect(30,143,272,1,WHITE); // X
   screenNumber=0;  
@@ -431,8 +433,11 @@ void loop() {
       Serial.print("screen number : ");
       Serial.println(screenNumber);
 #endif
-
-      tft.fillRect(31,28,256,162,BLACK);
+      
+      tft.fillRect(31,0,259,215,BLACK);
+  tft.setCursor(110,3);
+  tft.setTextColor(WHITE);
+  tft.println("Transpulmonar P Sensor ");
       tft.fillRect(0,198,320,50,BLACK);
       tft.fillRect(33,185,320,100,BLACK);
       tft.fillRect(30,143,272,1,WHITE); // X
@@ -562,22 +567,25 @@ void loop() {
   #else
   tft.println("???");
   #endif
-  
 
+  tft.setTextColor(WHITE);
   tft.setCursor(120,230);
-  tft.println("PL mean: ");
+  tft.println("Ratio: ");
   tft.setCursor(170,230);
+  if(((Pesmax-Pesmin)/(Pawmax-Pawmin)>=0.8) && ((Pesmax-Pesmin)/(Pawmax-Pawmin))<=1.2))
+  {tft.setTextColor(GREEN);}
+  else{tft.setTextColor(YELLOW);}
   #if ROUNDOPTION==1
-  tft.println(String(round(PLavg)));
+  tft.println(String(round((Pesmax-Pesmin)/(Pawmax-Pawmin))));
   #elif ROUNDOPTION==5
-  tft.println(String(round(round2dot5(PLavg)*10.)/10)+"."+String(round(round2dot5(PLavg)*10.)%10));
+  tft.println(String(round(round2dot5(PLavg)*10.)/10)+"."+String(round(round2dot5((Pesmax-Pesmin)/(Pawmax-Pawmin))*10.)%10));
   #elif ROUNDOPTION==0
-  tft.println(PLavg);
+  tft.println((Pesmax-Pesmin)/(Pawmax-Pawmin));
   #else
   tft.println("???");
   #endif
   
-
+  tft.setTextColor(GREEN);
   tft.setCursor(230,230);
   tft.println("PL Min: ");
   tft.setCursor(280,230);

@@ -572,7 +572,7 @@ void loop() {
   tft.setCursor(120,230);
   tft.println("Ratio: ");
   tft.setCursor(170,230);
-  if(((Pesmax-Pesmin)/(Pawmax-Pawmin)>=0.8) && ((Pesmax-Pesmin)/(Pawmax-Pawmin))<=1.2))
+  if( ((Pesmax-Pesmin)/(Pawmax-Pawmin))>=0.8 && ((Pesmax-Pesmin)/(Pawmax-Pawmin))<=1.2)
   {tft.setTextColor(GREEN);}
   else{tft.setTextColor(YELLOW);}
   #if ROUNDOPTION==1
